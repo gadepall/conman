@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2021/Arch Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: gvv_tmes_conics.aux
+The style file: tfs.bst
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Database file #1: school.bib
+Warning--empty booktitle in kemh103
+Warning--empty pages in kemh103
+You've used 2 entries,
+            3611 wiz_defined-function locations,
+            1182 strings with 10461 characters,
+and the built_in function-call counts, 806 in all, are:
+= -- 46
+> -- 15
+< -- 2
++ -- 7
+- -- 4
+* -- 50
+:= -- 107
+add.period$ -- 2
+call.type$ -- 2
+change.case$ -- 8
+chr.to.int$ -- 3
+cite$ -- 4
+duplicate$ -- 83
+empty$ -- 93
+format.name$ -- 4
+if$ -- 169
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 19
+newline$ -- 12
+num.names$ -- 4
+pop$ -- 42
+preamble$ -- 1
+purify$ -- 6
+quote$ -- 0
+skip$ -- 20
+stack$ -- 0
+substring$ -- 29
+swap$ -- 31
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 4
+warning$ -- 2
+while$ -- 7
+width$ -- 3
+write$ -- 24
+(There were 2 warnings)

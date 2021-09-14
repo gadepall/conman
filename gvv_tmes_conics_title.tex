@@ -1,0 +1,222 @@
+% tMESguide.tex
+% v4.2 released May 2008
+
+\documentclass[]{tMES2e}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{amsthm}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+%\DeclareMathOperator{\cosh}{cosh}
+%\DeclareMathOperator{\sinh}{sinh}
+%\DeclareMathOperator{\csch}{csch}
+\begin{document}
+
+\markboth{}{Algebraic proofs for converse theorems for  a cyclic quadrilateral}
+
+%\markboth{G V V Sharma}{Algebraic proofs for converse theorems for  a cyclic quadrilateral}
+
+\articletype{}
+
+\title{Algebraic proofs for converse theorems for  a cyclic quadrilateral}
+\author{G V V Sharma$^{\ast}$\thanks{ $^{\ast}$Email: gadepall@ee.iith.ac.in
+\vspace{6pt}} \\\vspace{6pt}  {\em{EE Department, IIT Hyderabad,\\ Kandi 502285, India}}}
+
+
+
+
+\maketitle
+
+\begin{abstract}
+Proofs of some theorems related to cyclic quadrilaterals are provided using coordinate geometry and trigonometry.  Through this approach, constructions and proofs using contradiction are avoided. 
+\begin{keywords}
+cyclic quadrilateral, coordinate geometry, trigonometry
+\end{keywords}\bigskip
+
+
+\end{abstract}
+
+
+%\section{Introduction}
+%The hyperbolic functions are defined as \cite{loney}
+%\begin{align}
+%\sinh x = \frac{e^{x}-e^{-x}}{2}
+%\cosh x = \frac{e^{x}+e^{-x}}{2}
+%\end{align}
+%and 
+%\begin{align}
+%\sinh^n x = \brak{\frac{e^{x}-e^{-x}}{2}}^n
+%\end{align}
+%can be expressed as a linear combination of exponential functions involving binomial coefficients \cite{hall}.  This property, along with the series expansion for $e^x$ is used for expressing several new binomial sums in closed form. 
+%
+%\section{Main Results}
+%The following examples describe the process of obtaining the binomial sums.
+%%
+%\begin{example}
+%%
+%To show that
+%%
+%\begin{multline}
+%\comb{n}{n}\brak{n+1}^{n+1}-\comb{n}{n-1}n^{n+1} + \comb{n}{n-2}\brak{n-1}^{n+1} + \dots +\brak{-1}^n\comb{n}{0} 1^{n+1} 
+%\\
+%= \frac{\brak{n+2}!}{2}
+%%\frac{1+\sum_{r=1}^{n}r\, \perm{r}{r}}{2}
+%\label{eq:comb_1}
+%\end{multline}
+%%
+%\end{example}
+%\proof
+%Using the binomial theorem, 
+%%
+%\begin{align}
+%\begin{split}
+%\brak{e^{x}-1}^n &=\comb{n}{n}e^{nx} - \comb{n}{n-1}e^{\brak{n-1}x} + \comb{n}{n-2}e^{\brak{n-2}x} + \dots + \brak{-1}^n\comb{n}{0}\\
+%\Rightarrow e^x\brak{e^{x}-1}^n &=\comb{n}{n}e^{\brak{n+1}x} - \comb{n}{n-1}e^{nx} + \comb{n}{n-2}e^{\brak{n-1}x} + \dots + \brak{-1}^n\comb{n}{0}e^x %\\
+%% \brak{1 + x + \frac{x^2}{2!}+\dots} \brak{x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dots}  &=\comb{n}{n}e^{\brak{n+1}x} - \comb{n}{n-1}e^{nx} + \comb{n}{n-2}e^{\brak{n-1}x} + \dots + \brak{-1}^n\comb{n}{0}e^x
+%\end{split}
+%\label{eq:comb_perm1}
+%\end{align}
+%Expanding the above as a power series,
+%\begin{multline}
+% \brak{1 + x + \frac{x^2}{2!}+\dots} \brak{x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dots}^n  
+%\\
+%=\comb{n}{n}e^{\brak{n+1}x} - \comb{n}{n-1}e^{nx} + \comb{n}{n-2}e^{\brak{n-1}x} + \dots + \brak{-1}^n\comb{n}{0}e^x
+%\label{eq:comb_perm2}
+%\end{multline}
+%%
+%Equating the coefficients of $x^{n+1}$  on both sides of \eqref{eq:comb_perm1}
+%%
+%\begin{multline}
+%\comb{n}{n}\frac{\brak{n+1}^{n+1}}{\brak{n+1}!}-\comb{n}{n-1} \frac{n^{n+1}}{\brak{n+1}!}  + \comb{n}{n-2}\frac{\brak{n-1}^{n+1}}{\brak{n+1}!} + \dots +\brak{-1}^n\comb{n}{0} \frac{1^{n+1}}{\brak{n+1}!} = \frac{n+2}{2}
+%%\\
+%%\implies \comb{n}{n} \brak{n+1}^{n+1} - \comb{n}{n-1} \brak{n}^{n+1} + \comb{n}{n-2} \brak{n+1}^{n-1} + \dots + \brak{-1}^n\comb{n}{0} \brak{1}^{n+1} &= \frac{\brak{n+1}!}{2}
+%\end{multline}
+%%
+%resulting in \eqref{eq:comb_1}.
+%%The R.H.S. of \eqref{eq:comb_1} can be expressed as
+%%\begin{align}
+%%\frac{1 + \sum_{r=1}^{n}r \, \perm{r}{r}}{2} = \frac{1+\sum_{r=1}^{n}\cbrak{\brak{r+1}!-r!}}{2} = \frac{\brak{n+1}!}{2}
+%%\end{align}
+%%
+%%
+%\begin{example}
+%Show that
+%\begin{align}
+%\comb{n}{n}n^{n+2}-\comb{n}{n-1}\brak{n-1}^{n+2} + \comb{n}{n-2}\brak{n-2}^{n+2} + \dots  = \frac{n\brak{3n+1}\brak{n+2}!}{3!}
+%\label{eq:comb_2}
+%\end{align}
+%%
+%\end{example}
+%\proof
+%Using the binomial expansion, 
+%\begin{align}
+%e^{nx}\brak{e^x-e^{-x}}^n = \comb{n}{n}e^{2nx}- \comb{n}{n-1}e^{\brak{2n-2}x} + \comb{n}{n-2}e^{\brak{2n-4}x} - \dots
+%\label{eq:comb2_1}
+%\end{align}
+%and expanding the L.H.S. as a series,
+%\begin{align}
+%e^{nx}\brak{e^x-e^{-x}}^n &=  \brak{1 + nx + \frac{n^2x^2}{2!}+\dots} \brak{2x+\frac{2x^3}{3!}+\dots}^n  
+%\\
+%&= 2^n\brak{1 + nx + \frac{n^2x^2}{2!}+\dots} \brak{x^n+n\frac{x^{n+2}}{3!}+\dots} .
+%\label{eq:comb2_2}
+%\end{align}
+%From \eqref{eq:comb2_1} and \eqref{eq:comb2_2},
+%\begin{multline}
+%2^n\brak{1 + nx + \frac{n^2x^2}{2!}+\dots} \brak{x^n+n\frac{x^{n+2}}{3!}+\dots}  
+%\\
+%= \comb{n}{n}e^{2nx}- \comb{n}{n-1}e^{\brak{2n-2}x} + \comb{n}{n-2}e^{\brak{2n-4}x} - \dots
+%\label{eq:comb2_3}
+%\end{multline}
+%Collecting coefficients of $x^{n+2}$ on both sides of \eqref{eq:comb2_3},
+%\begin{multline}
+%\frac{2^n}{\brak{n+2}!}\cbrak{\comb{n}{n}n^{n+2}- \comb{n}{n-1}\brak{n-1}^{\brak{n+2}} + \comb{n}{n-2}\brak{n-1}^{\brak{n+2}x} - \dots} 
+%\\
+%= 2^n\brak{\frac{n}{3!}+\frac{n^2}{2!}}
+%\label{eq:comb2_4}
+%\end{multline}
+%%
+%which, upon simplification, yields \eqref{eq:comb_2}
+%
+%%
+%\begin{example}
+%\begin{align}
+%\comb{n}{n}\brak{n+1}^{n+2}-\comb{n}{n-1}\brak{n-1}^{n+2} + \comb{n}{n-2}\brak{n-3}^{n+2} + \dots 
+%%+\brak{-1}^n\comb{n}{0} 1^{n+1} 
+%=2^n\frac{\brak{n+3}!}{3!}
+%%=\frac{2^n}{3!} \cbrak{1+\sum_{r=1}^{n+3}r\, \perm{r}{r}}
+%\label{eq:comb_3}
+%\end{align}
+%\end{example}
+%%
+%%
+%\proof Following the approach in \eqref{eq:comb2_1}, we have the identity
+%\begin{align}
+%e^{x}\brak{e^x-e^{-x}}^n = \comb{n}{n}e^{\brak{n+1}x}- \comb{n}{n-1}e^{\brak{n-1}x} + \comb{n}{n-2}e^{\brak{n-2}x} - \dots.
+%\label{eq:comb3_1}
+%\end{align}
+%Expanding the L.H.S. above as a power series,
+%\begin{align}
+%e^{x}\brak{e^x-e^{-x}}^n  &= \brak{2x}^n \brak{1 + x + \frac{x^2}{2!}+\dots} \brak{1+\frac{x^2}{3!}+\frac{x^4}{5!}+\dots}^n  
+%\\
+%&=2^nx^n \brak{1 + x + \frac{x^2}{2!}+\dots} \brak{1+\frac{nx^2}{3!}+\dots}
+%\label{eq:comb3_2}
+%\end{align}
+%From \eqref{eq:comb3_1} and \eqref{eq:comb3_2}, equating the coefficients of $x^n$ on both sides, 
+%\begin{align}
+%2^n\frac{\brak{n+3}}{3!} &= \comb{n}{n}\frac{\brak{n+1}^{n+2}}{\brak{n+2}!}-\comb{n}{n-1}\frac{\brak{n-1}^{n+2}}{\brak{n+2}!}+\comb{n}{n-2}\frac{\brak{n-3}^{n+2}}{\brak{n+2}!}-\dots
+%%\\
+%%\implies 
+%%2^n\frac{\brak{n+3}!}{3!} &= \comb{n}{n}{\brak{n+1}^{n+2}}-\comb{n}{n-1}{\brak{n-1}^{n+2}}+\comb{n}{n-2}{\brak{n-3}^{n+2}}-\dots
+%\label{eq:comb3_3}
+%\end{align}
+%yielding \eqref{eq:comb_3} after simplification.
+%\begin{example}
+%\begin{multline}
+%\comb{n}{n}\brak{n^2+1}^{n+2}-\comb{n}{n-1}\brak{n^2-2n+11}^{n+2} + \comb{n}{n-2}\brak{n^2-4n+1}^{n+2} - \dots  
+%\\
+%= \frac{\brak{n^3+3}\brak{2n}^n\brak{n+2}!}{3!}
+%\label{eq:comb_4}
+%\end{multline}
+%\end{example}
+%\proof
+%We have the  binomial expansion, 
+%\begin{align}
+%e^{x}\brak{e^{nx}-e^{-nx}}^n = \comb{n}{n}e^{\brak{n^2+1}x}- \comb{n}{n-1}e^{\brak{n^2-2n+1}x} + \comb{n}{n-2}e^{\brak{n^2-4n+1}x} - \dots 
+%\label{eq:comb_4_1}
+%\end{align}
+%Expanding the L.H.S. as an infinite series,
+%%
+%\begin{align}
+%e^{x}\brak{e^{nx}-e^{-nx}}^n = \brak{2n}^n\brak{1+x+\frac{x^2}{2!}+\dots}\brak{x^n+\frac{n^3x^{n+2}}{3!}+\dots}
+%\label{eq:comb_4_2}
+%\end{align}
+%Equating the coefficients of $x^{n+2}$ in \eqref{eq:comb_4_1} and \eqref{eq:comb_4_2}
+%\begin{multline}
+%\frac{1}{\brak{n+2}!}\lcbrak{\comb{n}{n}\brak{n^2+1}^{n+2}-\comb{n}{n-1}\brak{n^2-2n+11}^{n+2}}
+%\\ 
+% +\rcbrak{\comb{n}{n-2}\brak{n^2-4n+1}^{n+2} - \dots}  
+%= \frac{\brak{n^3+3}\brak{2n}^n}{3!}
+%%
+%%e^{x}\brak{e^{nx}-e^{-nx}}^n = \comb{n}{n}e^{\brak{n^2+1}x}- \comb{n}{n-1}e^{\brak{n^2-2n+1}x} + \comb{n}{n-2}e^{\brak{n^2-4n+1}x} - \dots 
+%\label{eq:comb_4_3}
+%\end{multline}
+%resulting in \eqref{eq:comb_4}.
+%
+%\bibliographystyle{tMES}
+%\bibliography{chandwani}
+%
+\end{document}

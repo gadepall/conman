@@ -1,0 +1,45 @@
+
+
+\begin{tikzpicture}
+[scale=2,>=stealth,point/.style={draw,circle,fill = black,inner sep=0.5pt},]
+
+%Polar Coordinates
+\def\Ax{2.298}  %r=3 , theta1 = 320 degree
+\def\Ay{-1.928}
+\def\Bx{-1.928} %r=3 , theta2 = 230 degree
+\def\By{-2.298}
+\def\Cx{-1.5}  %r=3 , theta3 = 120 degree
+\def\Cy{2.598}
+\def\Dx{2.457}  %r=3 , theta4 =35 degree
+\def\Dy{1.720}
+
+%Labeling points
+\node (A) at (\Ax,\Ay)[point,label=below right:$A$] {};
+\node (B) at (\Bx,\By)[point,label=below left:$B$] {};
+\node (C) at (\Cx,\Cy)[point,label=below left:$C$] {};
+\node (D) at (\Dx,\Dy)[point,label=above right:$D$] {};
+
+\node (O) at (0,0)[point,label= right:$O$] {};
+
+%Drawing triangle ABC
+\draw (C) -- node[left] {} (B);
+\draw (B) -- node[left] {} (A);
+\draw (D) -- node[left] {} (A);
+\draw (D) -- node[left] {} (C);
+
+\draw [dashed] (O) -- node[left] {$r$}(C);
+\draw [dashed] (O) -- node[left] {$r$}(B);
+\draw [dashed] (O) -- node[left] {$r$}(A);
+\draw [dashed] (O) -- node[right] {$k$}(D);
+
+\tkzFillAngle[fill=green!50,size=.3](C,D,A)
+
+\tkzFillAngle[fill=red!50,size=.3](A,B,C)
+
+\tkzLabelAngle[pos=0.5](C,D,A){$180\degree - \theta$}
+
+\tkzLabelAngle[pos=0.5](A,B,C){$\theta$}
+
+\end{tikzpicture}
+	
+
